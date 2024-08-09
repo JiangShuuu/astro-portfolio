@@ -1,0 +1,23 @@
+---
+import Header from "@/components/header";
+const { title } = Astro.props;
+---
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav>
+      <Header />
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <!-- 页脚内容 -->
+    </footer>
+  </body>
+</html>
