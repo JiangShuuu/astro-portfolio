@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
+import { useStore } from "@nanostores/react";
+import { isNavSheetOpen } from "@/store/use-nav-sheet";
 
 const links = [
   {
@@ -27,18 +36,26 @@ const links = [
 
 const MobileNav = () => {
   const [pathname, setPathname] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
+  const $isNavSheetOpen = useStore(isNavSheetOpen);
+
+  const openSheet = () => {
+    isNavSheetOpen.set(!$isNavSheetOpen);
+  };
 
   useEffect(() => {
     setPathname(window.location.pathname);
   }, []);
 
   return (
-    <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
+    <Sheet open={$isNavSheetOpen} onOpenChange={openSheet}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
+        <SheetHeader>
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
+        </SheetHeader>
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
           <a href="/">

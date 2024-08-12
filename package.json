@@ -16,6 +16,7 @@
     "@astrojs/starlight": "^0.25.3",
     "@astrojs/tailwind": "^5.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -32,6 +33,8 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@nanostores/react": "^0.7.3",
+    "nanostores": "^0.11.2",
     "react-icons": "^5.2.1"
   }
 }
