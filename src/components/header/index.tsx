@@ -4,12 +4,12 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white bg-black">
+    <header className="py-4 text-white bg-black">
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <h1 className="text-4xl font-semibold">
           <a href="/">
-            Luke<span className="text-accent">.</span>
+            John Lu<span className="text-accent">.</span>
           </a>
         </h1>
         {/* desktop nav & hire me button */}
