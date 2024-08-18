@@ -19,7 +19,8 @@ const stats = [
   },
 ];
 
-const CountUpComponent = CountUp.default ?? CountUp;
+type CountUpType = typeof CountUp & { default?: typeof CountUp };
+const CountUpComponent = (CountUp as CountUpType).default ?? CountUp;
 
 export default function Stats() {
   return (
