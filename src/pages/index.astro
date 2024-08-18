@@ -1,12 +1,12 @@
 ---
 import '../styles/index.css'
-import TestComponent from "../components/test"
+import Home from "../components/pages/home"
 import Layout from '@/layouts/index.astro';
 
 ---
 
 <div>
   <Layout title="首頁 - Jiangshu Lu">
-    <TestComponent />
+    <Home client:load/>
   </Layout>
 </div>
