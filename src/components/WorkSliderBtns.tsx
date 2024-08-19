@@ -6,9 +6,9 @@ const WorkSliderBtns = ({
   btnStyles,
   iconsStyles,
 }: {
-  containerStyles: string;
-  btnStyles: string;
-  iconsStyles: string;
+  containerStyles?: string;
+  btnStyles?: string;
+  iconsStyles?: string;
 }) => {
   const swiper = useSwiper();
   return (
