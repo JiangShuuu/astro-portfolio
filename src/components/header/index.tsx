@@ -2,6 +2,29 @@ import { Button } from "@/components/ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
+const links = [
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "blog",
+    path: "/guides/example",
+  },
+  {
+    name: "resume",
+    path: "/resume",
+  },
+  {
+    name: "work",
+    path: "/work",
+  },
+  {
+    name: "contact",
+    path: "/contact",
+  },
+];
+
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white ">
@@ -14,7 +37,7 @@ const Header = () => {
         </h1>
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
-          <Nav />
+          <Nav links={links} />
           <a href="/contact">
             <Button>Hire me</Button>
           </a>
@@ -22,7 +45,7 @@ const Header = () => {
 
         {/* mobile nav */}
         <div className="xl:hidden">
-          <MobileNav />
+          <MobileNav links={links} />
         </div>
       </div>
     </header>

@@ -1,29 +1,6 @@
 import { useState, useEffect } from "react";
 
-const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
-];
-
-const Nav = () => {
+const Nav = ({ links }: { links: { name: string; path: string }[] }) => {
   const [pathname, setPathname] = useState("");
 
   useEffect(() => {
