@@ -1,5 +1,5 @@
 ---
-title: Example Guide
+title: Example Guide123
 description: A guide in my new Starlight docs site.
 ---
 

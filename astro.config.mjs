@@ -14,12 +14,12 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Guides",
+          label: "NextJs - App Router",
           items: [
             // Each item here is one entry in the navigation menu.
             {
-              label: "Example Guide",
-              slug: "guides/example",
+              label: "GraphQL Codegen & Tanstack Query",
+              slug: "nextjs/graphql-codegen-tanstack-query",
             },
           ],
         },
