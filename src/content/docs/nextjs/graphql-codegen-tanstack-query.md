@@ -1,6 +1,7 @@
 ---
 title: Next.js App Router, GraphQL Codegen & TanStack Query
 description: A New Way to Fetch GraphQL Data in Next.js Apps
+lastUpdated: 2024-08-29
 ---
 
 在 call graphQL 時, 通常的選擇會是 Apollo, 但自從 React Query 也開始支援後, call graphQL API 又多了一個新選擇
@@ -538,7 +539,7 @@ export default async function ServerComponent() {
 }
 ```
 
-### fetcher - Query
+### fetcher - query
 
 ```jsx
 import {
