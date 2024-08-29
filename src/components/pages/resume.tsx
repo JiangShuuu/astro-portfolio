@@ -29,27 +29,27 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
+      fieldValue: "John Lu",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "(+886) 912-697-801",
     },
     {
       fieldName: "Experience",
-      fieldValue: "12+ Years",
+      fieldValue: "2+ Years",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "luke.01",
+      fieldName: "Line",
+      fieldValue: "globelex",
     },
     {
       fieldName: "Nationality",
-      fieldValue: "American",
+      fieldValue: "Taiwan Taipei",
     },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
+      fieldValue: "globelex65@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -57,7 +57,7 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "Chinese, English",
     },
   ],
 };
@@ -67,37 +67,37 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Specializing in React and Vue.js framework development, I excel at creating high-performance and user-friendly web applications. With extensive front-end development experience covering everything from infrastructure to CI/CD deployment, I am also adept at communicating with stakeholders to precisely clarify requirements, thanks to my background in sales.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "創星物聯科技",
+      position: "Mid Front-End Developer",
+      duration: "2024 - Present",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      company: "104 人力銀行",
+      position: "Front-End Developer",
+      duration: "2023 - 2024",
     },
     {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
+      company: "精鏡傳媒",
+      position: "Junior Front-End Developer",
+      duration: "2022 - 2023",
     },
     {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
+      company: "集客數據行銷",
+      position: "Account Manager",
+      duration: "2021",
     },
     {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
+      company: "紅門互動",
+      position: "Account Executive",
+      duration: "2017 - 2019",
     },
     {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      company: "Sales Journey",
+      position: "Sales",
+      duration: "2015 - 2017",
     },
   ],
 };
@@ -211,7 +211,7 @@ export default function Resume() {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className=" text-white/60 mx-auto xl:mx-0 text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
