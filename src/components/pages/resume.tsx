@@ -7,7 +7,23 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiNuxtdotjs,
+  SiMysql,
+  SiMongodb,
+  SiPostgresql,
+  SiExpress,
+  SiGraphql,
+  SiReactquery,
+  SiTrpc,
+  SiShadcnui,
+  SiTypescript,
+  SiAstro,
+  SiRedux,
+} from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -25,7 +41,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "If you are looking for a proactive and responsible Front-End Developer, feel free to contact me. I look forward to the opportunity for an interview to get to know each other. Thank you!",
   info: [
     {
       fieldName: "Name",
@@ -146,20 +162,8 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I am proficient in React and Vue, with extensive experience in their associated SSR frameworks. I excel in utilizing React Query or Apollo for optimized data caching. Additionally, I have foundational experience in developing full-stack applications using Express, PostgreSQL, and tRPC.",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
     {
       icon: <FaReact />,
       name: "react.js",
@@ -169,12 +173,61 @@ const skills = {
       name: "next.js",
     },
     {
+      icon: <SiVuedotjs />,
+      name: "Vue.js",
+    },
+    {
+      icon: <SiNuxtdotjs />,
+      name: "Nuxt.js",
+    },
+    {
+      icon: <SiRedux />,
+      name: "redux",
+    },
+    {
+      icon: <SiGraphql />,
+      name: "graphql",
+    },
+    {
+      icon: <SiReactquery />,
+      name: "react-query",
+    },
+    {
+      icon: <SiTrpc />,
+      name: "trpc",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
+    },
+    {
+      icon: <SiExpress />,
+      name: "express.js",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgresql",
+    },
+    {
+      icon: <SiMysql />,
+      name: "mysql",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "mongodb",
+    },
+    {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
     },
+
     {
-      icon: <FaNodeJs />,
-      name: "node.js",
+      icon: <SiShadcnui />,
+      name: "shadcn/ui",
+    },
+    {
+      icon: <SiAstro />,
+      name: "astro",
     },
     {
       icon: <FaFigma />,
@@ -191,14 +244,14 @@ export default function Resume() {
         opacity: 1,
         transition: { delay: 0, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex  justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6 h-full">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             {/* <TabsTrigger value="education">Education</TabsTrigger> */}
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -208,7 +261,7 @@ export default function Resume() {
           {/* content */}
           <div className="min-h-[70vh] w-full">
             {/* experience */}
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="experience" className="w-full h-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className=" text-white/60 mx-auto xl:mx-0 text-justify">
@@ -276,41 +329,43 @@ export default function Resume() {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="text-justify text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
 
             {/* about */}
             <TabsContent
               value="about"
-              className="w-full text-center xl:text-left"
+              className="w-full text-center xl:text-left h-full"
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="text-justify text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">

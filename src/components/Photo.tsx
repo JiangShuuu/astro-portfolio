@@ -17,11 +17,11 @@ export default function Photo() {
             opacity: 1,
             transition: { delay: 0, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] rounded-full overflow-hidden mix-blend-lighten absolute"
         >
           <img
             src="/assets/photo.png"
-            className="object-contain w-full h-full"
+            className="object-contain w-full h-full "
           />
         </motion.div>
 
