@@ -291,11 +291,11 @@ query Example($id: bigint!) {
 
 接著會看到類似的指令顯示則為成功
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/95d80199-2505-4794-87ff-a3e3a82deab2/4bbf9b0a-1555-4562-b238-15a2d1294923/image.png)
+![image.png](./images/codegen01.png)
 
 可以至 codegen 設定位置確認檔案產生
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/95d80199-2505-4794-87ff-a3e3a82deab2/914f3318-5527-413c-95d1-67801710ee00/image.png)
+![image.png](./images/codegen02.png)
 
 ### Third Step: 組件使用
 
@@ -623,8 +623,8 @@ export default async function ServerComponent() {
 
 ## Reference
 
-https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr#server-components--nextjs-app-router
+<a href="https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr#server-components--nextjs-app-router" target="_blank">TanStack Query - SSR & Next.js App Router</a>
 
-https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-react-query#using-custom-fetcher
+<a href="https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-react-query#using-custom-fetcher" target="_blank">GraphQL Code Generator - using custom Fetcher</a>
 
-https://plainenglish.io/community/next-js-app-router-graphql-codegen-and-tanstack-query
+<a href="https://plainenglish.io/community/next-js-app-router-graphql-codegen-and-tanstack-query" target="_blank"> Kevin Schaffter Example</a>
