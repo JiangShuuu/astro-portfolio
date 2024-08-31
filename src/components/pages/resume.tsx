@@ -263,31 +263,33 @@ export default function Resume() {
             {/* experience */}
             <TabsContent value="experience" className="w-full h-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className=" text-white/60 mx-auto xl:mx-0 text-justify">
+                <h3 className="text-4xl font-bold mb-0">{experience.title}</h3>
+                <p className=" text-white/60 mx-auto xl:mx-0 lg:text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] px-0">
                     {experience.items.map((item, index) => {
                       return (
-                        <li
+                        <div
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[140px] rounded-xl flex flex-col justify-center items-center lg:items-start lg:px-10 gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <span className="text-accent my-0">
+                            {item.duration}
+                          </span>
+                          <h3 className="w-[350px] lg:text-start">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <p className="text-white/60 my-0">{item.company}</p>
                           </div>
-                        </li>
+                        </div>
                       );
                     })}
-                  </ul>
+                  </div>
                 </ScrollArea>
               </div>
             </TabsContent>
@@ -295,7 +297,7 @@ export default function Resume() {
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <h3 className="text-4xl font-bold mb-0">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
@@ -328,16 +330,16 @@ export default function Resume() {
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <h3 className="text-4xl font-bold mb-0">{skills.title}</h3>
                   <p className="text-justify text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] px-0">
                     {skills.skillList.map((skill, index) => {
                       return (
-                        <li key={index} className="list-none ">
+                        <li key={index} className="list-none">
                           <TooltipProvider delayDuration={100}>
                             <Tooltip>
                               <TooltipTrigger className="w-full h-[150px] cursor-pointer bg-[#232329] rounded-xl flex justify-center items-center group">
@@ -364,11 +366,11 @@ export default function Resume() {
               className="w-full text-center xl:text-left h-full"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <h3 className="text-4xl font-bold mb-0">{about.title}</h3>
                 <p className="text-justify text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 list-none">
                   {about.info.map((item, index) => {
                     return (
                       <li

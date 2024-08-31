@@ -16,7 +16,7 @@
     --sl-color-gray-5: #303c2d;
     --sl-color-gray-6: #1f2a1c;
     --sl-color-black: #151a13;
-    --sl-content-width: 80rem;
+    --sl-content-width: 55rem;
   }
   /* Light mode colors. */
   :root[data-theme="light"] {
@@ -32,6 +32,11 @@
     --sl-color-gray-6: #eaf0e8;
     --sl-color-gray-7: #f4f7f3;
     --sl-color-black: #ffffff;
-    --sl-content-width: 80rem;
+  }
+
+  @media (min-width: 1550px) {
+    :root {
+      --sl-content-width: 80rem;
+    }
   }
 }
