@@ -1,3 +1,6 @@
+import starlightPlugin from "@astrojs/starlight-tailwind";
+// import colors from "tailwindcss/colors";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -30,7 +33,10 @@ module.exports = {
           hover: "#00e187",
         },
       },
-
+      // fontFamily: {
+      //   sans: ['"Atkinson Hyperlegible"'],
+      //   mono: ['"IBM Plex Mono"'],
+      // },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -47,5 +53,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), starlightPlugin()],
 };

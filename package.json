@@ -1,5 +1,5 @@
 {
-  "name": "cosmic-centauri",
+  "name": "johnshu-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,6 +14,7 @@
     "@astrojs/check": "^0.9.1",
     "@astrojs/react": "^3.6.1",
     "@astrojs/starlight": "^0.25.3",
+    "@astrojs/starlight-tailwind": "^2.0.3",
     "@astrojs/tailwind": "^5.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",

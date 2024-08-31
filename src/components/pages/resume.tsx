@@ -251,7 +251,7 @@ export default function Resume() {
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6 h-full">
+          <TabsList className="flex mt-10 flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6 h-full">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             {/* <TabsTrigger value="education">Education</TabsTrigger> */}
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -337,11 +337,11 @@ export default function Resume() {
                   <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                     {skills.skillList.map((skill, index) => {
                       return (
-                        <li key={index}>
+                        <li key={index} className="list-none ">
                           <TooltipProvider delayDuration={100}>
                             <Tooltip>
-                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                              <TooltipTrigger className="w-full h-[150px] cursor-pointer bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-accent transition-all duration-300 text-white">
                                   {skill.icon}
                                 </div>
                               </TooltipTrigger>

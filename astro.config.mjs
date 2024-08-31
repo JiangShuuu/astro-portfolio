@@ -6,11 +6,14 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
+    tailwind({
+      // 禁用默认的基础样式
+      applyBaseStyles: false,
+    }),
     starlight({
-      title: "My Docs",
+      title: "JohnShu Blog",
       social: {
-        github: "https://github.com/withastro/starlight",
+        github: "https://github.com/JiangShuuu",
       },
       sidebar: [
         {
@@ -30,6 +33,7 @@ export default defineConfig({
           },
         },
       ],
+      customCss: ["./src/styles/blog.css"],
     }),
     react(),
   ],
