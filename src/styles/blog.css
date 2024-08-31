@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode colors. */
 @layer base {
   /* Dark mode colors. */
   :root {
-    --sl-color-accent-low: #002836;
-    --sl-color-accent: #007594;
-    --sl-color-accent-high: #85d5f5;
+    --sl-color-accent-low: #00273d;
+    --sl-color-accent: #0071a7;
+    --sl-color-accent-high: #92d1fe;
     --sl-color-white: #ffffff;
-    --sl-color-gray-1: #eaf0e8;
-    --sl-color-gray-2: #bdc4bb;
-    --sl-color-gray-3: #82907f;
-    --sl-color-gray-4: #4f5c4d;
-    --sl-color-gray-5: #303c2d;
-    --sl-color-gray-6: #1f2a1c;
-    --sl-color-black: #151a13;
-    --sl-content-width: 55rem;
+    --sl-color-gray-1: #e7eff2;
+    --sl-color-gray-2: #bac4c8;
+    --sl-color-gray-3: #7b8f96;
+    --sl-color-gray-4: #495c62;
+    --sl-color-gray-5: #2a3b41;
+    --sl-color-gray-6: #182a2f;
+    --sl-color-black: #121a1c;
   }
   /* Light mode colors. */
   :root[data-theme="light"] {

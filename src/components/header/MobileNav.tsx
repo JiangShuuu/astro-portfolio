@@ -25,8 +25,8 @@ const MobileNav = ({ links }: { links?: { name: string; path: string }[] }) => {
 
   return (
     <Sheet open={$isNavSheetOpen} onOpenChange={openSheet}>
-      <SheetTrigger className="flex justify-center items-center xl:hidden">
-        <CiMenuFries className="text-[32px] text-accent" />
+      <SheetTrigger className="flex justify-center items-center xl:hidden bg-primary cursor-pointer">
+        <CiMenuFries className="text-[32px] text-accent " />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         <SheetHeader>
@@ -37,7 +37,7 @@ const MobileNav = ({ links }: { links?: { name: string; path: string }[] }) => {
         <div className="mt-32 mb-40 text-center text-2xl">
           <a href="/">
             <h1 className="text-4xl font-semibold">
-              Luke<span className="text-accent">.</span>
+              John Lu<span className="text-accent">.</span>
             </h1>
           </a>
         </div>

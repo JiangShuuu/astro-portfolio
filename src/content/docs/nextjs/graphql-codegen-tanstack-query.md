@@ -4,10 +4,10 @@ description: A New Way to Fetch GraphQL Data in Next.js Apps
 lastUpdated: 2024-08-29
 ---
 
-在 call graphQL 時, 通常的選擇會是 Apollo, 但自從 React Query 也開始支援後, call graphQL API 又多了一個新選擇
+在調用 GraphQL 時，過去的主要選擇通常是使用 Apollo，但自從 React Query 開始支援 GraphQL API 後，我們有了另一個強大的選擇。
 
-- React Query 為一個 fetch api 狀態管理套件, 可輕鬆做快取, retry 等功能
-- GraphQL codegen 為一個自動產生型別的套件, 可以保持與後端型別一致
+- React Query 是一個專門用來管理 API 請求狀態的套件，它可以輕鬆處理快取、重試等功能
+- GraphQL Codegen 是一個能夠自動生成型別的工具，確保前後端型別一致，提升開發效率
 
 ## Install
 
