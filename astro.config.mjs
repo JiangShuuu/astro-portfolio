@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     sitemap(),
     tailwind({
-      applyBaseStyles: false,
+      applyBaseStyles: true,
     }),
     starlight({
       title: "JohnShu Blog",
