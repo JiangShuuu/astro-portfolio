@@ -19,10 +19,10 @@ const links = [
     name: "projects",
     path: "/projects",
   },
-  {
-    name: "contact",
-    path: "/contact",
-  },
+  // {
+  //   name: "contact",
+  //   path: "/contact",
+  // },
 ];
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav links={links} />
-          <a href="/contact">
+          <a href="/resume?tab=about">
             <Button className="cursor-pointer">Hire me</Button>
           </a>
         </div>

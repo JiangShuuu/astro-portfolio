@@ -26,7 +26,7 @@ import {
 } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
+import { useEffect, useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -237,6 +237,16 @@ const skills = {
 };
 
 export default function Resume() {
+  const [activeTab, setActiveTab] = useState("experience");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get("tab");
+    if (tabParam) {
+      setActiveTab(tabParam);
+    }
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -248,7 +258,8 @@ export default function Resume() {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          value={activeTab}
+          onValueChange={setActiveTab}
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex mt-10 flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6 h-full">
