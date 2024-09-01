@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,10 +16,9 @@ export default defineConfig({
     starlight({
       title: "JohnShu Blog",
       logo: {
-        light: "./public/trees01.png",
-        dark: "./public/trees01.png",
+        src: "./src/assets/trees.png",
       },
-      favicon: "./public/favicon.svg",
+      favicon: "./src/assets/favicon.png",
       social: {
         github: "https://github.com/JiangShuuu",
       },
@@ -33,15 +33,16 @@ export default defineConfig({
             },
           ],
         },
-        {
-          label: "Reference",
-          autogenerate: {
-            directory: "reference",
-          },
-        },
+        // {
+        //   label: "Reference",
+        //   autogenerate: {
+        //     directory: "reference",
+        //   },
+        // },
       ],
       customCss: ["./src/styles/blog.css"],
     }),
     react(),
+    mdx(),
   ],
 });
