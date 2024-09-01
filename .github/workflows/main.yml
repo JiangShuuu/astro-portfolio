@@ -32,8 +32,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "build"
-          target: "~/"
+          source: "dist/*"
+          target: "~/dist/"
 
       - name: Run Deploy
         uses: appleboy/ssh-action@master
@@ -44,4 +44,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             sudo rm -rf /var/www/jiangshuuu.com/blog
-            sudo cp -R /home/ubuntu/build /var/www/jiangshuuu.com/blog
+            sudo cp -R /home/ubuntu/dist /var/www/jiangshuuu.com/blog
