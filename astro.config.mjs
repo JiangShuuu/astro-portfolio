@@ -14,11 +14,14 @@ export default defineConfig({
       applyBaseStyles: true,
     }),
     starlight({
-      title: "JohnShu Blog",
+      title: "JiangShu Blog",
+      components: {
+        SiteTitle: "./src/overrides/SiteTitle.astro",
+      },
       logo: {
         src: "./src/assets/trees.png",
       },
-      favicon: "./src/assets/favicon.png",
+      favicon: "/favicon.png",
       social: {
         github: "https://github.com/JiangShuuu",
       },
@@ -29,7 +32,26 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             {
               label: "GraphQL Codegen & Tanstack Query",
-              slug: "nextjs/graphql-codegen-tanstack-query",
+              slug: "docs/nextjs/graphql-codegen-tanstack-query",
+            },
+          ],
+        },
+        {
+          label: "Cloudflare",
+          items: [
+            {
+              label: "Cloudflare Tunnel",
+              slug: "docs/cloudflare/cloudflare-tunnel",
+            },
+          ],
+        },
+        {
+          label: "SEO",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            {
+              label: "SPA FrontEnd Rendertron SEO",
+              slug: "docs/seo/rendertron-spa-seo",
             },
           ],
         },
