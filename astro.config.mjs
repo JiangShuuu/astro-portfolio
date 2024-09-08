@@ -43,6 +43,10 @@ export default defineConfig({
               label: "Cloudflare Tunnel",
               slug: "docs/cloudflare/cloudflare-tunnel",
             },
+            {
+              label: "Cloudflare Gmail",
+              slug: "docs/cloudflare/cloudflare-gmail",
+            },
           ],
         },
         {
@@ -55,12 +59,6 @@ export default defineConfig({
             },
           ],
         },
-        // {
-        //   label: "Reference",
-        //   autogenerate: {
-        //     directory: "reference",
-        //   },
-        // },
       ],
       customCss: ["./src/styles/blog.css"],
     }),
