@@ -16,7 +16,7 @@ export default defineConfig({
     starlight({
       title: "JiangShu Blog",
       components: {
-        SiteTitle: "./src/overrides/SiteTitle.astro",
+        SiteTitle: "./src/components/overrides/SiteTitle.astro",
       },
       logo: {
         src: "./src/assets/trees.png",

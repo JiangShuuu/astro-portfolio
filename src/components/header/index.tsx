@@ -9,7 +9,7 @@ const links = [
   },
   {
     name: "docs",
-    path: "/docs/intro",
+    path: "/docs",
   },
   {
     name: "resume",
